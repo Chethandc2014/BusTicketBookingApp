@@ -1,0 +1,40 @@
+<app-header>
+</app-header>
+<div class="login-content-algn">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <form #formRef="ngForm">
+        <div class="form-group">
+          <label for="name">UserName:</label>
+          <input type="text" name="name" id="name" class="form-control form-control-lg" #userId="ngModel" placeholder="User Name" [(ngModel)]='loginUser.userId'
+            required>
+          <div *ngIf="!userId.valid && userId.touched" class="alert alert-danger">
+             Name is required..
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" class="form-control form-control-lg" #pass="ngModel" placeholder="Password" [(ngModel)]='loginUser.password'
+          required>
+          <div *ngIf="!pass.valid && pass.touched" class="alert alert-danger">
+            Password is required..
+          </div>
+          <!-- <small id="helpId" class="text-muted">Help text</small> -->
+        </div>
+        <div class="form-group">
+          <a href="http://">Forgot Password?</a>
+        </div>
+        <div *ngIf="isLoginError">
+              {{loginErrorMess}}
+        </div>
+        <div class="form-group">
+          <button type="button" [disabled]="formRef.status!='VALID'" (click)="login()"  class="btn btn-success">Login</button>
+          <button type="button" (click)="register()" class="btn btn-primary sign-up-rt">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- <pre>{{formRef.value | json}}</pre> -->
+</div>
+<app-footer>
+</app-footer>

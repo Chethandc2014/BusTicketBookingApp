@@ -1,0 +1,16 @@
+.card-body{
+    text-align: center;
+}
+
+.card-title{
+ display: inline;
+}
+
+.f-b-l{
+ font-size:50px;
+ padding-right: 20px;
+}
+.f-b-r{
+ font-size:50px;
+ padding-left: 20px;
+}

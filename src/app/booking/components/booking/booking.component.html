@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="card booking-card">
+        <div class="card-body">
+            <h4 class="card-title">Bangalore->Channai</h4>
+            <p class="card-text"></p>
+        </div>
+        <ul class="list-group list-group">
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-sm-6 r">
+                        Travels Name:
+                    </div>
+                    <div class="col-sm-6 l">
+                        {{bookingDetails.travelsNme}}
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-sm-6 r">
+                        Seat No:
+                    </div>
+                    <div class="col-sm-6 l">
+                        {{bookingDetails.seatNo}}
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-sm-6 r">
+                        Date of Journey:
+                    </div>
+                    <div class="col-sm-6 l">
+                        {{bookingDetails.dateOfJourney}}
+                    </div>
+
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-sm-6 r">
+                        Departure Time:
+                    </div>
+                    <div class="col-sm-6 l">
+                        {{bookingDetails.departureTime}}
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-sm-6 r">
+                        Total Amount:
+                    </div>
+                    <div class="col-sm-6 l">
+                        {{bookingDetails.totalAmount}}
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <button type="button" name="" id="" class="btn btn-primary" (click)="displaySearchResults()">
+            <i class="fa fa-arrow-right" style="margin-right:10px"></i>Proceed to Payment</button>
+    </div>
+
+</div>

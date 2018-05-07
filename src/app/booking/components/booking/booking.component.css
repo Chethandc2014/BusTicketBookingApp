@@ -1,0 +1,20 @@
+.booking-card{
+    margin-top:40px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+}
+
+.col-bok{
+display: inline;
+}
+
+.r{
+    text-align: right;
+}
+
+.l{
+text-align: left;
+}

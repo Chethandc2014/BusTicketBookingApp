@@ -1,0 +1,8 @@
+<mat-form-field >
+	<input matInput placeholder="" aria-label="City" [matAutocomplete]="auto" [formControl]="sourceCityCtrl">
+	<mat-autocomplete #auto="matAutocomplete">
+		<mat-option *ngFor="let city of filteredCities | async" [value]="city.name">
+			<span>{{ city.name }}</span>
+		</mat-option>
+	</mat-autocomplete>
+</mat-form-field>

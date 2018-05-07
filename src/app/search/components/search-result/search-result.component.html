@@ -1,0 +1,37 @@
+<div class="search-res">
+    <div class="card">
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" style="background-color: #57e8e8">
+            <div class="row" style="font-weight:600">
+                <div class="col-cus" >
+                 <span> Bus No</span>
+                </div>
+                <div class="col-cus"><span>Boarding Point</span></div>
+                <div class="col-cus"><span>Departure Time</span></div>
+                <div class="col-cus"><span>Deboadrding Point</span></div>
+                <div class="col-cus"><span>Arrival Time</span></div>
+                <div class="col-cus"><span>Travel time</span></div>
+                <div class="col-cus"></div>
+            </div>
+
+        </li>
+
+        <li class="list-group-item" *ngFor="let bus of searchRes;let index=index">
+            
+          <div class="row">
+              <div class="col-cus">
+                <i class="fa fa-bus"></i>
+                <span>{{bus.busNo}}</span>
+              </div>
+              <div class="col-cus"><span>{{bus.startingPoint}}</span></div>
+              <div class="col-cus"><span>{{bus.depTime}}</span></div>
+              <div class="col-cus"><span>{{bus.endingPoint}}</span></div>
+              <div class="col-cus"><span>{{bus.arrTIme}}</span></div>
+              <div class="col-cus"><span>{{bus.travelTime}}</span></div>
+              <div class="col-cus"><button class="btn btn-primary" (click)="checkSeatAvailability(index)">CheckSeat Availibility</button></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+</div>

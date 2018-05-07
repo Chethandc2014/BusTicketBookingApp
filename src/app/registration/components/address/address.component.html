@@ -1,0 +1,43 @@
+<div class="container mv-left">
+  <form [formGroup]="regForm"  #addRef="ngForm">
+    <div formGroupName="address">
+        <div class="form-row" >
+            <div class="form-group col-lg-4">
+              <label for="country">Country</label>
+              <select class="form-control" formControlName="country" id="country">
+                <option>INDIA</option>
+                <option>US</option>
+                <option>CHINA</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-lg-4">
+              <label for="state">State</label>
+              <select class="form-control" formControlName="state" id="state">
+                <option>KARNATAKA</option>
+                <option>AP</option>
+                <option>KERALA</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-lg-4">
+              <label for="city">City</label>
+              <select class="form-control" formControlName="city" id="city">
+                <option>BENGALURU</option>
+                <option>CHINNAI</option>
+                <option>MUMBAI</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-lg-4">
+              <button class="btn btn-primary" (click)="register()">Submit</button>
+            </div>
+          </div>
+          <!-- <pre>{{addRef.value | json}}</pre> -->
+    </div>
+  </form>
+
+</div>

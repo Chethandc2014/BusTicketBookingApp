@@ -1,0 +1,22 @@
+.seat-details-body{
+    margin-left:20%;
+    margin-right: 20%;
+    width: auto;
+    margin-top: 30px;
+}
+
+.fa>fa-bus{
+    font-size: 50px;
+    margin-left: 3%;
+}
+
+.trals-dts{
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.seat-row{
+    width: 100%;
+    margin-left:25%;
+    margin-right:25%
+}

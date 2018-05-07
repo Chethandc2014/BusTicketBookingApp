@@ -1,0 +1,17 @@
+.header{
+    height: 70px;
+    background-color:#002b36;
+    color: aliceblue;
+}
+
+.user-details{
+ float: left;
+ position: relative;
+ top:20px;
+}
+
+.logout{
+ float: right;
+ position: relative;
+ top:40px;
+}

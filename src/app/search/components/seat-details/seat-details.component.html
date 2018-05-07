@@ -1,0 +1,22 @@
+<div class="card seat-details-body">
+
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-6">
+        <i class="fa fa-bus" style="margin-left:3%;font-size:40px"></i>-BusNo-{{seatDetails.busNo}}
+      </div>
+      <div class="col-sm-6 trals-dts">
+        Travels Name:VRL travels
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <ul class="row seat-row"  *ngFor="let seatRows of seatDetails.seatInfo;let index=index;">
+      <li class="list-group-item" *ngFor="let row of seatRows;let rowIndex=index;" [ngStyle]="{'background-color':(row?.isBooked=='true')?  '#a7b6c3':'inherit'}"
+        style="cursor:pointer" (click)="routeToBooking()">
+        {{row.seatNo}}</li>
+    </ul>
+  </div> :
+  <button type="button" name="" id="" class="btn btn-primary" (click)="displaySearchResults()">
+    <i class="fa fa-arrow-left" style="margin-right:10px"></i>Back to Search Results</button>
+</div>
