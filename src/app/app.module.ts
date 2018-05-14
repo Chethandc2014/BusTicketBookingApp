@@ -17,7 +17,7 @@ import { RegistrationModule } from './registration/registration.module';
 import { ComponentCreationService } from './shared/services/component-creation.service';
 import { BookingModule } from './booking/booking.module';
 import { UserDataService } from './shared/services/user-data.service';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/http';
 
 
 @NgModule({
@@ -27,7 +27,7 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     //App Modules
     LoginModule,
     RegistrationModule,
