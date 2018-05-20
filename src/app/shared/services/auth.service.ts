@@ -13,7 +13,7 @@ export class AuthService {
   login(user: User): Observable<any> {
     let body = user.toString();
     let header = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
-    let observable = this.http.post(AppConfig.getConfigData('apiUrl') + 'login', body
+    let observable = this.http.post(AppConfig.getConfigData('api-url') + 'login', body
       , new RequestOptions({ headers: header }))
     return observable;
   }
