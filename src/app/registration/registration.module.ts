@@ -8,6 +8,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { FooterModule } from '../footer/footer.module';
 import { HeaderModule } from '../header/header.module';
 import { RegistrationDataService } from './services/registration-data.service';
+import { SetPasswordComponent } from './components/set-password/set-password.component';
+
 
 
 const REGIS_ROUTES: Routes = [
@@ -15,7 +17,8 @@ const REGIS_ROUTES: Routes = [
     path: 'register', component: RegistrationComponent,
     children: [
       { path: 'basicinfo', component: BasicInfoComponent },
-      { path: 'address', component: AddressComponent }
+      { path: 'address', component: AddressComponent },
+      {path:'set-password',component:SetPasswordComponent}
     ]
   }
 ]
@@ -29,7 +32,7 @@ const REGIS_ROUTES: Routes = [
     FooterModule,
     HeaderModule
   ],
-  declarations: [RegistrationComponent, AddressComponent, BasicInfoComponent],
+  declarations: [RegistrationComponent, AddressComponent, BasicInfoComponent, SetPasswordComponent],
   providers:[RegistrationDataService]
 })
 export class RegistrationModule { }
