@@ -17,6 +17,10 @@ export class BasicInfoComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.createFormControl();
+  }
+
+  createFormControl() {
     this.registrationForm = this.fb.group({
       firstName: [""],
       middleName: [""],
