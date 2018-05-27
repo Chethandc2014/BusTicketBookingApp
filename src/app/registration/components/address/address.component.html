@@ -4,30 +4,24 @@
         <div class="form-row" >
             <div class="form-group col-lg-4">
               <label for="country">Country</label>
-              <select class="form-control" formControlName="country" id="country">
-                <option>INDIA</option>
-                <option>US</option>
-                <option>CHINA</option>
+              <select class="form-control" formControlName="country" #country id="country" (change)="getStateList(country.value)" >
+                <option *ngFor="let country of countryList" [value]="country.countryId">{{country.countryName}}</option>    
               </select>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-lg-4">
               <label for="state">State</label>
-              <select class="form-control" formControlName="state" id="state">
-                <option>KARNATAKA</option>
-                <option>AP</option>
-                <option>KERALA</option>
+              <select class="form-control" formControlName="state" #state id="state" (change)="getCityList(state.value)">
+                <option *ngFor="let state of stateList" [value]="state.stateId">{{state.stateName}}</option>
               </select>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-lg-4">
               <label for="city">City</label>
-              <select class="form-control" formControlName="city" id="city">
-                <option>BENGALURU</option>
-                <option>CHINNAI</option>
-                <option>MUMBAI</option>
+              <select class="form-control" formControlName="city" #city id="city" >
+                <option *ngFor="let city of cityList" [value]="city.cityId">{{city.cityName}}</option>
               </select>
             </div>
           </div>
