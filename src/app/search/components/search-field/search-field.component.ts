@@ -17,6 +17,7 @@ export class SearchFieldComponent implements OnInit {
   private searchValue = '';
   //cities = ['BENGALORE', 'CHANNAI', 'MUMBAI', 'KOLKATTA', 'DELHI', 'PUNE'];//Need to change as AJAX Call
   private cities=[];
+  
   private filteredList = [];
   
   constructor(private http:Http) {
