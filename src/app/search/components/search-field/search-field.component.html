@@ -2,13 +2,13 @@
     <span class="input-group-btn">
         <button class="btn btn-secondary" type="button">{{label}}</button>
     </span>
-    <input type="text" class="form-control" placeholder="Search for {{label}} City.." [(ngModel)]="searchValue" (keyup)='cityFilter()'>
+    <input type="text" class="form-control" placeholder="Search for {{label}} City.." [(ngModel)]="searchValue" (keyup)='getBookingCities(searchValue)'>
     <i class="fa fa-search res-search-icon" aria-hidden="true"></i>
 </div>
-<div class="suggestions" *ngIf='filteredList.length > 0' [style.padding-left]="paddingLeft">
+<div class="suggestions" *ngIf='cities.length > 0' [style.padding-left]="paddingLeft">
     <ul>
-        <li *ngFor="let city of filteredList" (click)="select(city)">
-            <a>{{city}}</a>
+        <li *ngFor="let city of cities" (click)="select(city)">
+            <a>{{city.stationName}}</a>
         </li>
     </ul>
 </div>
