@@ -8,13 +8,15 @@ import { SearchResultDataService } from './services/search-result-data.service';
 import { SearchCompViewRefService } from './services/search-comp-view-ref.service';
 import { SearchFieldComponent } from './components/search-field/search-field.component';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   exports:[SearchPanelComponent,SearchResultComponent],
   declarations: [SearchPanelComponent, SearchResultComponent, SeatDetailsComponent, SearchComponentManagerDirective, SearchFieldComponent],
